@@ -1,6 +1,8 @@
 from preprocess_for_single_tephi_input import *
 from PIL import Image
 
+# For 2-tephi model, check_tephi_avaliabililty(..., num_tephi=2) & get_list(..., num_tephi=2)
+# For 4-tephi model, check_tephi_avaliabililty(..., num_tephi=4) & get_list(..., num_tephi=4)
 
 def save_all_scaled_sounding_data(df, target_dir, feature_scaled):
     for d, df_d in df.groupby('date'):

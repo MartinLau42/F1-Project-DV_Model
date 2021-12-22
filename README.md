@@ -61,7 +61,7 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
 
 ## Model
   Single-tephi : Self-build CNN with pretrained model VGG19 <br>
-  Multi-tephi : On top of single-tephi model, RNN is added
+  Multi-tephi : On top of single-tephi model for each tephi input, RNN is added after concatenation
 
 ## Scripts
   ### 1) interpolate_137_levels.ipynb

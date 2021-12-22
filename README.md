@@ -10,11 +10,11 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
   Large : DV >= 5.5
 
 ## Data
-  ### -Training
+  ### Training
     • King's Park sounding data (2-second resolution)
     • King's Park tephigram (drawn by the sounding data using custom python script)
     • HKO DV (abs_Tmax - abs_Tmin) of the training period
-  ### -Verification
+  ### Verification
     • Model sounding data (ECMWF 137 levels)
     • Model tephigram (drawn by the sounding data using custom python script)
     • CFO and OCF 9-day performance of DV forecast (developed by 9-day forecast of Tmax and Tmin)
@@ -64,31 +64,37 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
   Multi-tephi : On top of single-tephi model, RNN is added
 
 ## Scripts
-  1) interpolate_137_levels.ipynb
-    • Dependencies
-      a) King's Park sounding data (2-second resolution)
-      b) Model sounding data (ECMWF 137 levels)
-      c) problem_date_upto100hPa.txt
-    • Return
-      a) /base_directory/137_interpolate_KP_ascent_data/KPUpper_yyyymmddZZ.csv (ZZ : 00 or 12)
-      b) tephi_interpolate_90_levels_00Z.csv
-      c) tephi_interpolate_90_levels_12Z.csv
-  *2) loop_file_90.sh / loop_file_90_bg.sh
-    • Dependencies
-      * All in directory : tephigram/
-        a) tephigram_90_levels.py / tephigram_90_levels_bg.py
-        b) thermo.py
-        c) xyplot.py
-        d) constants.py
-    • Return
-      a) ~/public_html/tephi_png_without_background/tephi-KPUpper_yyyymmddZZ.png (ZZ : 00 or 12)
-  *3) loop_file.sh / loop_file_bg.sh --> Similar to Scripts - 2
-  4) remove_png_not_00Z_12Z.ipynb
-    • Dependencies
-      a) Directory with filename {tephi-KPUpper_yyyymmddZZ.png} (ZZ : 00 or 12)
+  ### 1) interpolate_137_levels.ipynb
+    Dependencies 
+      a) King's Park sounding data (2-second resolution) 
+      b) Model sounding data (ECMWF 137 levels) 
+      c) problem_date_upto100hPa.txt 
+    Return 
+      a) /base_directory/137_interpolate_KP_ascent_data/KPUpper_yyyymmddZZ.csv (ZZ : 00 or 12) 
+      b) tephi_interpolate_90_levels_00Z.csv 
+      c) tephi_interpolate_90_levels_12Z.csv 
+  
+  ### $2) loop_file_90.sh / loop_file_90_bg.sh 
+    Dependencies 
+      $ All in directory : tephigram/ 
+        a) tephigram_90_levels.py / tephigram_90_levels_bg.py 
+        b) thermo.py 
+        c) xyplot.py 
+        d) constants.py 
+    Return 
+      a) ~/public_html/tephi_png_without_background/tephi-KPUpper_yyyymmddZZ.png (ZZ : 00 or 12) 
+  
+  ### $3) loop_file.sh / loop_file_bg.sh --> Similar to Scripts - 2 
+  
+  ### 4) remove_png_not_00Z_12Z.ipynb 
+    Dependencies 
+      a) Directory with filename {tephi-KPUpper_yyyymmddZZ.png} (ZZ : 00 or 12) 
     --> Remove files that not in these formats
-  5) preprocess_for_single_tephi_input.py / preprocess_for_multi_tephi_input.py
-  6) build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py
-  7) post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py
+  
+  ### 5) preprocess_for_single_tephi_input.py / preprocess_for_multi_tephi_input.py
+  
+  ### 6) build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py 
+  
+  ### 7) post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py
     
-* Not stored in github, please look at the documentation (.docx)
+$ Not stored in github, please look at the documentation (.docx)

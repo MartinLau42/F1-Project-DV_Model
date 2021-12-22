@@ -31,7 +31,8 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
   ### Preprocess (detailed please see preprocess_for_single_tephi_input.py / preprocess_for_multi_tephi_input.py) (Scripts - 5)
     1) Data preprocessing
     2) Define training, validation and test set
-    3) Create Dataset / TFRecords
+    3) Scale the sounding data into range of [0, 1] or [-1, 1]
+    4) Create Dataset / TFRecords
   ### Building model (detailed please see build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py) (Scripts - 6)
     1) Define initial_bias (for binary classification)
     2) Build your model

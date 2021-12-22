@@ -21,7 +21,7 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
     
 ## Flow
   ### Data preparation
-    1) Interpolate King's Park sounding data (2-second resolution) to the average values of pressure levels in ECMWF data which is limited to >= 50hPa (137 levels turns out to be 90 levels) --> interpolate_137_levels.ipynb (Scripts - 1)
+    1) Interpolate King's Park sounding data (2-second resolution) according to the average values of pressure levels in ECMWF data which is limited to >= 50hPa (137 levels turns out to be 90 levels) --> interpolate_137_levels.ipynb (Scripts - 1)
     2) Draw King's Park tephigram --> loop_file_90.sh (without background lines) / loop_file_90_bg.sh (with background lines) (Scripts - 2)
     3) Collect DV data
     4) Collect Model sounding data (ECMWF 137 levels)

@@ -5,8 +5,8 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
   • To forecast 9-day DV classes in a probabilistic manner using tephigram and sounding data
 
 ## DV Class
-  Small : DV < 2.5
-  Normal : 2.5 <= DV < 5.5
+  Small : DV < 2.5 <br>
+  Normal : 2.5 <= DV < 5.5 <br>
   Large : DV >= 5.5
 
 ## Data
@@ -60,7 +60,7 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
     1) Plot POD-FAR-CSI comparison between model, CFO and OCF
 
 ## Model
-  Single-tephi : Self-build CNN with pretrained model VGG19
+  Single-tephi : Self-build CNN with pretrained model VGG19 <br>
   Multi-tephi : On top of single-tephi model, RNN is added
 
 ## Scripts

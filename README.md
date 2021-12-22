@@ -1,26 +1,26 @@
 # F1-Project-DV_Model
 Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature - Deep Learning based
 
-# Target
+## Target
   • To forecast 9-day DV classes in a probabilistic manner using tephigram and sounding data
 
-# DV Class
+## DV Class
   Small : DV < 2.5
   Normal : 2.5 <= DV < 5.5
   Large : DV >= 5.5
 
-# Data
-  ## Training
+## Data
+  ### -Training
     • King's Park sounding data (2-second resolution)
     • King's Park tephigram (drawn by the sounding data using custom python script)
     • HKO DV (abs_Tmax - abs_Tmin) of the training period
-  ## Verification
+  ### -Verification
     • Model sounding data (ECMWF 137 levels)
     • Model tephigram (drawn by the sounding data using custom python script)
     • CFO and OCF 9-day performance of DV forecast (developed by 9-day forecast of Tmax and Tmin)
     
-# Flow
-  ## Data preparation
+## Flow
+  ### Data preparation
     1) Interpolate King's Park sounding data (2-second resolution) to the average values of pressure levels in ECMWF data which is limited to >= 50hPa (137 levels turns out to be 90 levels) --> interpolate_137_levels.ipynb (Scripts - 1)
     2) Draw King's Park tephigram --> loop_file_90.sh (without background lines) / loop_file_90_bg.sh (with background lines) (Scripts - 2)
     3) Collect DV data
@@ -28,27 +28,27 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
     5) Draw model tephigram --> loop_file.sh (without background lines) / loop_file_bg.sh (with background lines) (Scripts - 3)
     6) Image cleaning if needed --> remove_png_not_00Z_12Z.ipynb (Scripts - 4)
     7) Collect 9-day forecast of Tmax and Tmin by CFO and OCF
-  ## Preprocess (detailed please see preprocess_for_single_tephi_input.py / preprocess_for_multi_tephi_input.py) (Scripts - 5)
+  ### Preprocess (detailed please see preprocess_for_single_tephi_input.py / preprocess_for_multi_tephi_input.py) (Scripts - 5)
     1) Data preprocessing
     2) Define training, validation and test set
     3) Create Dataset / TFRecords
-  ## Building model (detailed please see build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py) (Scripts - 6)
+  ### Building model (detailed please see build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py) (Scripts - 6)
     1) Define initial_bias (for binary classification)
     2) Build your model
     3) Compile the model
     4) Define callback (including the loss function and the metrics)
     5) Define class_weight
-  ## Training
+  ### Training
     1) Train the model
     2) Save the model
     3) Plot the history (validation and test)
-  ## Fine-tuning (detailed please see build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py) (Scripts - 6)
+  ### Fine-tuning (detailed please see build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py) (Scripts - 6)
     1) Unfreeze some layers in pretrained model
     2) Compile the model
     3) Retrain
     4) Save the model
     5) Plot the history (validation and test)
-  ## Performance Checking (detailed please see post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py) (Scripts - 7)
+  ### Performance Checking (detailed please see post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py) (Scripts - 7)
     1) Loss function
     2) POD, FAR, CSI
     3) ROC curve
@@ -56,14 +56,14 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
     5) Classification report (precision, recall, f1-score)
     6) Reliability diagram
     7) Class Activation Map (CAM)
-  ## Verification on model tephigram (detailed please see post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py) (Scripts - 7)
+  ### Verification on model tephigram (detailed please see post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py) (Scripts - 7)
     1) Plot POD-FAR-CSI comparison between model, CFO and OCF
 
-# Model
+## Model
   Single-tephi : Self-build CNN with pretrained model VGG19
   Multi-tephi : On top of single-tephi model, RNN is added
 
-# Scripts
+## Scripts
   1) interpolate_137_levels.ipynb
     • Dependencies
       a) King's Park sounding data (2-second resolution)

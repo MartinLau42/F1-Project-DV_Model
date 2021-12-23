@@ -102,4 +102,4 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
   --> The scripts where you actually do the experiments on, enjoy it! <br>
   --> Suggest you can read and try single-tephi scripts before getting into multi-tephi scripts :)
     
-$ Not stored in github, please look at the documentation (.docx)
+$ Not stored in github, please look at the handover notes (.docx)

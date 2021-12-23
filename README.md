@@ -98,6 +98,7 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
   
   ### 7) post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py
   
-  ### 8) train_single_tephi_model.ipynb / train_multi_tephi_model.ipynb --> The scripts where you actually do the experiment on, enjoy it!
+  ### 8) train_single_tephi_model.ipynb / train_multi_tephi_model.ipynb 
+  --> The scripts where you actually do the experiment on, enjoy it!
     
 $ Not stored in github, please look at the documentation (.docx)

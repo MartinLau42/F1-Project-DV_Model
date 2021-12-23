@@ -28,12 +28,12 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
     5) Draw model tephigram --> loop_file.sh (without background lines) / loop_file_bg.sh (with background lines) (Scripts - 3)
     6) Image cleaning if needed --> remove_png_not_00Z_12Z.ipynb (Scripts - 4)
     7) Collect 9-day forecast of Tmax and Tmin by CFO and OCF
-  ### Preprocess (detailed please see preprocess_for_single_tephi_input.py / preprocess_for_multi_tephi_input.py) (Scripts - 5)
+  ### Preprocess (detailed please see Scripts - 5)
     1) Data preprocessing
     2) Define training, validation and test set
     3) Scale the sounding data into range of [0, 1] or [-1, 1]
     4) Create Dataset / TFRecords
-  ### Building model (detailed please see build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py) (Scripts - 6)
+  ### Building model (detailed please see Scripts - 6)
     1) Define initial_bias (for binary classification)
     2) Build your model
     3) Compile the model
@@ -43,13 +43,13 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
     1) Train the model
     2) Save the model
     3) Plot the history (validation and test)
-  ### Fine-tuning (detailed please see build_model_for_single_tephi_input.py / build_model_for_multi_tephi_input.py) (Scripts - 6)
+  ### Fine-tuning (detailed please see Scripts - 6)
     1) Unfreeze some layers in pretrained model
     2) Compile the model
     3) Retrain
     4) Save the model
     5) Plot the history (validation and test)
-  ### Performance Checking (detailed please see post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py) (Scripts - 7)
+  ### Performance Checking (detailed please see Scripts - 7)
     1) Loss function
     2) POD, FAR, CSI
     3) ROC curve
@@ -57,7 +57,7 @@ Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature
     5) Classification report (precision, recall, f1-score)
     6) Reliability diagram
     7) Class Activation Map (CAM)
-  ### Verification on model tephigram (detailed please see post_processing_for_single_tephi_input.py / post_processing_for_multi_tephi_input.py) (Scripts - 7)
+  ### Verification on model tephigram (detailed please see Scripts - 7)
     1) Plot POD-FAR-CSI comparison between model, CFO and OCF
 
 ## Model

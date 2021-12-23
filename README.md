@@ -1,5 +1,5 @@
-# F1-Project-DV_Model
-Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature - Deep Learning based
+# F1 Project - 2021 One-year Placement
+Application of Tephigram in Forecasting Diurnal Variation of Surface Temperature - Deep Learning Based
 
 ## Target
   • To forecast 9-day DV classes in a probabilistic manner using tephigram and sounding data
